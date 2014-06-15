@@ -1,4 +1,4 @@
-import play.Project._
+import play.PlayJava
 
 name    := "java-demo"
 
@@ -8,4 +8,3 @@ libraryDependencies ++= Seq("ws.securesocial" %% "securesocial" % "master-SNAPSH
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
-playJavaSettings
