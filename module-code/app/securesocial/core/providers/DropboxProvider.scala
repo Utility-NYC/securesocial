@@ -22,6 +22,7 @@ import play.api.libs.ws.WS
 import securesocial.core._
 import securesocial.core.providers.DropboxProvider._
 import securesocial.core.services.{CacheService, RoutesService}
+import play.api.Play.current
 
 import scala.concurrent.Future
 

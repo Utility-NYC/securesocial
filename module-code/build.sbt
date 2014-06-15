@@ -1,16 +1,19 @@
-import play.Project._
+import play.PlayScala
 
 name := "SecureSocial"
 
-version := Common.version
+version := "play-2.3-SNAPSHOT"
+
+scalaVersion := "2.11.1"
+
+lazy val mainModule = (project in file(".")).enablePlugins(PlayScala)
 
 libraryDependencies ++= Seq(
   cache,
-  "com.typesafe" %% "play-plugins-util" % "2.2.0",
-  "com.typesafe" %% "play-plugins-mailer" % "2.2.0",
-  "org.mindrot" % "jbcrypt" % "0.3m",
-  "org.specs2" %% "specs2" % "2.3.7" % "test",
-  "org.mockito" % "mockito-all" % "1.9.5"%"test"
+  ws,
+  "com.typesafe" % "play-plugins-util_2.10" % "2.2.0",
+  "com.typesafe" % "play-plugins-mailer_2.10" % "2.2.0",
+  "org.mindrot" % "jbcrypt" % "0.3m"
 )
 
 resolvers ++= Seq(
@@ -21,7 +24,7 @@ organization := "ws.securesocial"
 
 organizationName := "SecureSocial"
 
-organizationHomepage := Some(new URL("http://www.securesocial.ws"))
+organizationHomepage := Some(new URL("http://www.securesocial.ws")) 
 
 publishMavenStyle := true
 
@@ -62,5 +65,3 @@ pomExtra := (
 )
 
 scalacOptions := Seq("-feature", "-deprecation")
-
-playScalaSettings

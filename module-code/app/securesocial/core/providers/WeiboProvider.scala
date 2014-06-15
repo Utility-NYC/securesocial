@@ -20,6 +20,7 @@ package securesocial.core.providers
 import play.api.libs.ws.{Response, WS}
 import securesocial.core._
 import securesocial.core.services.{CacheService, RoutesService}
+import play.api.Play.current
 
 import scala.concurrent.{ExecutionContext, Future}
 
